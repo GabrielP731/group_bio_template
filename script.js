@@ -14,6 +14,7 @@ function toggleBio(bioId) {
 
 /**
  * Shows the specified section ('bios' or 'vision') and hides the other
+ * Adds a fade-in animation when switching sections
  * @param {string} sectionId - The ID of the section to display
  */
 function showSection(sectionId) {
@@ -22,12 +23,18 @@ function showSection(sectionId) {
 
     // Display the bios section and hide the vision section
     if (sectionId === "bios") {
-        biosSection.style.display = "flex";
         visionSection.style.display = "none";
+        biosSection.style.display = "flex";
+        biosSection.classList.remove("section-fade-in");
+        void biosSection.offsetWidth;
+        biosSection.classList.add("section-fade-in");
     }
     // Display the vision section and hide the bios section
     else if (sectionId === "vision") {
         biosSection.style.display = "none";
         visionSection.style.display = "block";
+        visionSection.classList.remove("section-fade-in");
+        void visionSection.offsetWidth;
+        visionSection.classList.add("section-fade-in");
     }
 }
