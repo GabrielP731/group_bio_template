@@ -1,7 +1,7 @@
 /* General page styling - black and gold theme */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #1a1a1a;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #121212;
     color: #f0f0f0;
     margin: 0;
     padding: 0;
@@ -9,17 +9,20 @@ body {
 
 /* Header section styling */
 header {
-    background: #000;
+    background: linear-gradient(180deg, #111 0%, #000 100%);
     color: #d4af37;
-    padding: 20px 0;
+    padding: 30px 0;
     text-align: center;
     border-bottom: 3px solid #d4af37;
+    box-shadow: 0 4px 20px rgba(212, 175, 55, 0.15);
 }
 
 header h1 {
     color: #d4af37;
-    font-size: 2.2em;
+    font-size: 2.4em;
     margin-bottom: 5px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 /* Styling for team logo image */
@@ -34,19 +37,24 @@ header nav {
 }
 
 header nav button {
-    background: #d4af37;
+    background: linear-gradient(180deg, #e0be50, #c4a030);
     color: #000;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 10px 22px;
+    border-radius: 6px;
     cursor: pointer;
     margin: 0 5px;
     font-weight: bold;
-    transition: background 0.3s;
+    font-size: 0.95em;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(212, 175, 55, 0.2);
 }
 
 header nav button:hover {
-    background: #b8962e;
+    background: linear-gradient(180deg, #d4af37, #b08a20);
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);
+    transform: translateY(-1px);
 }
 
 /* Flex container for team bios and vision sections */
@@ -60,63 +68,75 @@ header nav button:hover {
 
 /* Card styling for individual team bios */
 .card {
-    background: #2a2a2a;
-    border: 2px solid #d4af37;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(145deg, #2a2a2a, #222);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     margin: 10px;
-    padding: 25px;
+    padding: 28px;
     flex: 1 1 calc(30% - 40px);
     text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    backdrop-filter: blur(5px);
 }
 
 .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(212, 175, 55, 0.3);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.2);
+    border-color: #d4af37;
 }
 
 /* Member photo styling */
 .member-photo {
-    width: 120px;
-    height: 120px;
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid #d4af37;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover .member-photo {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
 }
 
 .card h2 {
     color: #d4af37;
     margin: 10px 0 5px;
+    font-size: 1.4em;
+    letter-spacing: 0.5px;
 }
 
 /* Role label under name */
 .role {
     color: #b8962e;
     font-style: italic;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    font-size: 0.9em;
 }
 
 /* Initially hide bio details */
 .bio {
     display: none;
-    margin-top: 10px;
-    color: #ccc;
+    margin-top: 12px;
+    color: #bbb;
+    line-height: 1.5;
 }
 
 /* Moodboard section inside cards */
 .moodboard {
-    margin-top: 15px;
+    margin-top: 18px;
     text-align: left;
-    border-top: 1px solid #444;
-    padding-top: 10px;
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+    padding-top: 12px;
 }
 
 .moodboard h3 {
     color: #d4af37;
     font-size: 1em;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
 .moodboard ul {
@@ -125,55 +145,69 @@ header nav button:hover {
 }
 
 .moodboard li {
-    padding: 3px 0;
-    color: #ccc;
+    padding: 4px 0;
+    color: #bbb;
+    font-size: 0.9em;
 }
 
 .moodboard a {
     color: #d4af37;
     text-decoration: none;
+    transition: color 0.2s ease;
 }
 
 .moodboard a:hover {
+    color: #f0d060;
     text-decoration: underline;
 }
 
 /* Button styling */
 button {
-    background: #d4af37;
+    background: linear-gradient(180deg, #e0be50, #c4a030);
     color: #000;
     border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
+    padding: 10px 18px;
+    border-radius: 6px;
     cursor: pointer;
     font-weight: bold;
-    transition: background 0.3s;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(212, 175, 55, 0.2);
 }
 
 button:hover {
-    background: #b8962e;
+    background: linear-gradient(180deg, #d4af37, #b08a20);
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);
+    transform: translateY(-1px);
 }
 
 /* Vision/Mission section styling */
 .vision-section {
-    background: #2a2a2a;
-    border: 2px solid #d4af37;
-    border-radius: 10px;
-    padding: 25px;
+    background: linear-gradient(145deg, #2a2a2a, #222);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    border-radius: 12px;
+    padding: 30px;
     margin-bottom: 20px;
     width: 100%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: border-color 0.3s ease;
+}
+
+.vision-section:hover {
+    border-color: #d4af37;
 }
 
 .vision-section h2 {
     color: #d4af37;
-    border-bottom: 2px solid #d4af37;
-    padding-bottom: 8px;
-    margin-bottom: 15px;
+    border-bottom: 2px solid rgba(212, 175, 55, 0.4);
+    padding-bottom: 10px;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
 }
 
 .vision-section h3 {
     color: #d4af37;
-    margin-top: 15px;
+    margin-top: 18px;
 }
 
 .vision-section ul {
@@ -181,11 +215,12 @@ button:hover {
 }
 
 .vision-section li {
-    margin-bottom: 8px;
-    color: #ccc;
+    margin-bottom: 10px;
+    color: #bbb;
+    line-height: 1.5;
 }
 
 .vision-section p {
-    color: #ccc;
-    line-height: 1.6;
+    color: #bbb;
+    line-height: 1.7;
 }
