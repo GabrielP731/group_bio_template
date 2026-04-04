@@ -1,6 +1,6 @@
 /* General page styling - black and gold theme */
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: 'Inter', Arial, sans-serif;
     background-color: #121212;
     color: #f0f0f0;
     margin: 0;
@@ -20,6 +20,7 @@ header {
 header h1 {
     color: #d4af37;
     font-size: 2.4em;
+    font-weight: 700;
     margin-bottom: 5px;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -44,7 +45,7 @@ header nav button {
     border-radius: 6px;
     cursor: pointer;
     margin: 0 5px;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 0.95em;
     letter-spacing: 0.5px;
     transition: all 0.3s ease;
@@ -77,13 +78,79 @@ header nav button:hover {
     flex: 1 1 calc(30% - 40px);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-    backdrop-filter: blur(5px);
 }
 
 .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(212, 175, 55, 0.2);
     border-color: #d4af37;
+}
+
+/* Unique card accent styles for each member */
+.card-thomas {
+    border-top: 3px solid #d4af37;
+}
+
+.card-gabriel {
+    border-top: 3px solid #8a5cf5;
+}
+
+.card-arman {
+    border-top: 3px solid #37d4a0;
+}
+
+.card-thomas:hover {
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.25);
+}
+
+.card-gabriel:hover {
+    box-shadow: 0 8px 25px rgba(138, 92, 245, 0.25);
+}
+
+.card-arman:hover {
+    box-shadow: 0 8px 25px rgba(55, 212, 160, 0.25);
+}
+
+.card-gabriel h2 {
+    color: #8a5cf5;
+}
+
+.card-arman h2 {
+    color: #37d4a0;
+}
+
+.card-gabriel .role {
+    color: #7a4ce0;
+}
+
+.card-arman .role {
+    color: #2cb88a;
+}
+
+.card-gabriel .member-photo {
+    border-color: #8a5cf5;
+    box-shadow: 0 0 15px rgba(138, 92, 245, 0.2);
+}
+
+.card-arman .member-photo {
+    border-color: #37d4a0;
+    box-shadow: 0 0 15px rgba(55, 212, 160, 0.2);
+}
+
+.card-gabriel:hover .member-photo {
+    box-shadow: 0 0 20px rgba(138, 92, 245, 0.4);
+}
+
+.card-arman:hover .member-photo {
+    box-shadow: 0 0 20px rgba(55, 212, 160, 0.4);
+}
+
+.card-gabriel .moodboard h3 {
+    color: #8a5cf5;
+}
+
+.card-arman .moodboard h3 {
+    color: #37d4a0;
 }
 
 /* Member photo styling */
@@ -106,6 +173,7 @@ header nav button:hover {
     color: #d4af37;
     margin: 10px 0 5px;
     font-size: 1.4em;
+    font-weight: 700;
     letter-spacing: 0.5px;
 }
 
@@ -117,12 +185,24 @@ header nav button:hover {
     font-size: 0.9em;
 }
 
-/* Initially hide bio details */
+/* Bio details with fade-in animation */
 .bio {
     display: none;
     margin-top: 12px;
     color: #bbb;
     line-height: 1.5;
+    animation: fadeSlideIn 0.4s ease;
+}
+
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Moodboard section inside cards */
@@ -137,6 +217,7 @@ header nav button:hover {
     color: #d4af37;
     font-size: 1em;
     margin-bottom: 8px;
+    font-weight: 600;
 }
 
 .moodboard ul {
@@ -169,7 +250,7 @@ button {
     padding: 10px 18px;
     border-radius: 6px;
     cursor: pointer;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 0.9em;
     transition: all 0.3s ease;
     box-shadow: 0 2px 6px rgba(212, 175, 55, 0.2);
@@ -203,11 +284,13 @@ button:hover {
     padding-bottom: 10px;
     margin-bottom: 18px;
     letter-spacing: 1px;
+    font-weight: 700;
 }
 
 .vision-section h3 {
     color: #d4af37;
     margin-top: 18px;
+    font-weight: 600;
 }
 
 .vision-section ul {
@@ -223,4 +306,20 @@ button:hover {
 .vision-section p {
     color: #bbb;
     line-height: 1.7;
+}
+
+/* Footer styling */
+footer {
+    background: #000;
+    border-top: 2px solid rgba(212, 175, 55, 0.4);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+footer p {
+    color: #d4af37;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    margin: 0;
 }
