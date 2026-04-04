@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team Bio</title>
+    <title>Team TGA</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
 </head>
 <body>
 
 <header>
-    <h1>Meet Our Team</h1>
-    <!-- Example team logo -->
-    <img src="img/team-logo.png" alt="Team Logo" class="team-logo">
+    <h1>Meet Team TGA</h1>
+    <!-- Team logo -->
+    <img src="img/team-logo.png" alt="Team TGA Logo" class="team-logo">
 
     <!-- Navigation menu to switch between sections -->
     <nav>
@@ -22,31 +22,104 @@
 
 <!-- Team bios section (default section) -->
 <div id="bios" class="container">
-    <!-- Each card represents an individual team member -->
+
+    <!-- Thomas Kelly -->
     <div class="card">
-        <h2>John Doe</h2>
-        <p>Frontend Developer</p>
+        <img src="img/thomas.png" alt="Thomas Kelly" class="member-photo">
+        <h2>Thomas Kelly</h2>
+        <p class="role">Product Owner</p>
         <button onclick="toggleBio('bio1')">Show Bio</button>
-        <p id="bio1" class="bio">John is a skilled frontend developer with 5 years of experience in creating responsive web applications.</p>
+        <p id="bio1" class="bio">Senior CS student graduating in December. Plans to go into network engineering or cloud engineering. Currently building a startup social media company.</p>
+        <div class="moodboard">
+            <h3>Moodboard</h3>
+            <ul>
+                <li><a href="https://github.com/" target="_blank">GitHub</a></li>
+                <li>Cloud Computing</li>
+                <li>Networking</li>
+                <li>Startups & Entrepreneurship</li>
+            </ul>
+        </div>
     </div>
+
+    <!-- Gabriel Pacheco -->
     <div class="card">
-        <h2>Jane Smith</h2>
-        <p>Backend Developer</p>
+        <img src="img/gabriel.png" alt="Gabriel Pacheco" class="member-photo">
+        <h2>Gabriel Pacheco</h2>
+        <p class="role">Developer</p>
         <button onclick="toggleBio('bio2')">Show Bio</button>
-        <p id="bio2" class="bio">Jane is a backend developer specializing in server-side logic and database management.</p>
+        <p id="bio2" class="bio">Computer Science major who wants to pursue a role in video game design. He aims to focus on the technical aspects of game creation. His hobbies include drawing characters and music composition.</p>
+        <div class="moodboard">
+            <h3>Moodboard</h3>
+            <ul>
+                <li><a href="https://github.com/" target="_blank">GitHub</a></li>
+            </ul>
+        </div>
     </div>
+
+    <!-- Arman Sarrafi -->
     <div class="card">
-        <h2>Emily Johnson</h2>
-        <p>UI/UX Designer</p>
+        <img src="img/arman.png" alt="Arman Sarrafi" class="member-photo">
+        <h2>Arman Sarrafi</h2>
+        <p class="role">Scrum Master</p>
         <button onclick="toggleBio('bio3')">Show Bio</button>
-        <p id="bio3" class="bio">Emily is a UI/UX designer with a passion for creating user-friendly interfaces.</p>
+        <p id="bio3" class="bio">Bio coming soon.</p>
+        <div class="moodboard">
+            <h3>Moodboard</h3>
+            <ul>
+                <li><a href="https://github.com/" target="_blank">GitHub</a></li>
+            </ul>
+        </div>
     </div>
+
 </div>
 
 <!-- Team vision/mission statement section (hidden by default) -->
 <div id="vision" class="container" style="display: none;">
-    <h2>Our Mission Statement</h2>
-    <p>We strive to create a collaborative, inclusive, and innovative environment where team members feel empowered to push boundaries and achieve excellence in their craft. Our mission is to deliver high-quality solutions that meet and exceed our clients' expectations.</p>
+
+    <div class="vision-section">
+        <h2>Team Rules</h2>
+
+        <h3>Scrum Values</h3>
+        <p>Our team follows Scrum values of <strong>commitment</strong>, <strong>courage</strong>, <strong>focus</strong>, <strong>openness</strong>, and <strong>respect</strong> to ensure effective collaboration throughout the project.</p>
+
+        <h3>Sprint Schedule</h3>
+        <ul>
+            <li><strong>Monday 9:00 AM - 10:00 AM:</strong> Sprint planning — plan tasks for the sprint and review completed work.</li>
+            <li><strong>Wednesday 7:30 PM - 9:00 PM:</strong> Progress review — discuss obstacles and adjust approach if needed.</li>
+            <li><strong>Monday - Wednesday:</strong> Focused execution on assigned tasks.</li>
+            <li><strong>Wednesday - Friday:</strong> Completing and refining assigned tasks.</li>
+            <li><strong>Weekends:</strong> Generally free unless additional time is needed to stay on track.</li>
+        </ul>
+
+        <h3>Deadlines & Accountability</h3>
+        <ul>
+            <li>All assigned tasks must be completed by <strong>Friday at 6:00 PM</strong>.</li>
+            <li>If a member cannot finish by Friday, they are expected to continue working over the weekend.</li>
+            <li>All team members must communicate progress by sending a message before <strong>6:00 PM on Friday</strong> if they encounter issues, delays, or need assistance.</li>
+        </ul>
+
+        <h3>Conflict Resolution</h3>
+        <ul>
+            <li>If a team member is uncooperative or consistently fails to contribute, the team will first address the issue directly and respectfully as a group.</li>
+            <li>If the behavior continues, responsibilities may be redistributed and the issue will be escalated to the instructor if necessary.</li>
+        </ul>
+
+        <h3>Team Roles</h3>
+        <ul>
+            <li><strong>Product Owner:</strong> Thomas Kelly</li>
+            <li><strong>Scrum Master:</strong> Arman Sarrafi</li>
+        </ul>
+    </div>
+
+    <div class="vision-section">
+        <h2>Contributors</h2>
+        <ul>
+            <li>Thomas Kelly</li>
+            <li>Gabriel Pacheco</li>
+            <li>Arman Sarrafi</li>
+        </ul>
+    </div>
+
 </div>
 
 <script src="script.js"></script> <!-- Link to external JavaScript file -->

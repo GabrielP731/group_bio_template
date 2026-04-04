@@ -1,48 +1,58 @@
-/* General page styling */
+/* General page styling - black and gold theme */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #1a1a1a;
+    color: #f0f0f0;
     margin: 0;
     padding: 0;
 }
 
 /* Header section styling */
 header {
-    background: #333;
-    color: #fff;
-    padding: 10px 0;
+    background: #000;
+    color: #d4af37;
+    padding: 20px 0;
     text-align: center;
+    border-bottom: 3px solid #d4af37;
+}
+
+header h1 {
+    color: #d4af37;
+    font-size: 2.2em;
+    margin-bottom: 5px;
 }
 
 /* Styling for team logo image */
 .team-logo {
-    width: 150px; /* Adjust the size as needed */
+    width: 150px;
     margin-top: 10px;
 }
 
-/* Menu button styling */
+/* Navigation button styling */
 header nav {
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 header nav button {
-    background: #007BFF;
-    color: white;
+    background: #d4af37;
+    color: #000;
     border: none;
-    padding: 10px 15px;
+    padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     margin: 0 5px;
+    font-weight: bold;
+    transition: background 0.3s;
 }
 
 header nav button:hover {
-    background: #0056b3;
+    background: #b8962e;
 }
 
 /* Flex container for team bios and vision sections */
 .container {
-    width: 80%;
-    margin: 20px auto;
+    width: 85%;
+    margin: 30px auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -50,41 +60,132 @@ header nav button:hover {
 
 /* Card styling for individual team bios */
 .card {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: #2a2a2a;
+    border: 2px solid #d4af37;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     margin: 10px;
-    padding: 20px;
+    padding: 25px;
     flex: 1 1 calc(30% - 40px);
     text-align: center;
-    transition: transform 0.2s;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
     transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(212, 175, 55, 0.3);
 }
 
-h2 {
-    margin: 0 0 10px;
+/* Member photo styling */
+.member-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #d4af37;
+    margin-bottom: 10px;
+}
+
+.card h2 {
+    color: #d4af37;
+    margin: 10px 0 5px;
+}
+
+/* Role label under name */
+.role {
+    color: #b8962e;
+    font-style: italic;
+    margin-bottom: 10px;
 }
 
 /* Initially hide bio details */
 .bio {
     display: none;
     margin-top: 10px;
-    color: #555;
+    color: #ccc;
+}
+
+/* Moodboard section inside cards */
+.moodboard {
+    margin-top: 15px;
+    text-align: left;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+
+.moodboard h3 {
+    color: #d4af37;
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+.moodboard ul {
+    list-style: none;
+    padding: 0;
+}
+
+.moodboard li {
+    padding: 3px 0;
+    color: #ccc;
+}
+
+.moodboard a {
+    color: #d4af37;
+    text-decoration: none;
+}
+
+.moodboard a:hover {
+    text-decoration: underline;
 }
 
 /* Button styling */
 button {
-    background: #007BFF;
-    color: white;
+    background: #d4af37;
+    color: #000;
     border: none;
     padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
 }
 
 button:hover {
-    background: #0056b3;
+    background: #b8962e;
+}
+
+/* Vision/Mission section styling */
+.vision-section {
+    background: #2a2a2a;
+    border: 2px solid #d4af37;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.vision-section h2 {
+    color: #d4af37;
+    border-bottom: 2px solid #d4af37;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+
+.vision-section h3 {
+    color: #d4af37;
+    margin-top: 15px;
+}
+
+.vision-section ul {
+    padding-left: 20px;
+}
+
+.vision-section li {
+    margin-bottom: 8px;
+    color: #ccc;
+}
+
+.vision-section p {
+    color: #ccc;
+    line-height: 1.6;
 }
