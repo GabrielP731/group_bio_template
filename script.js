@@ -1,4 +1,25 @@
 /**
+ * Typing effect for the header text on page load
+ */
+document.addEventListener("DOMContentLoaded", function () {
+    const header = document.getElementById("typed-header");
+    const text = "Meet Team TGA";
+    let i = 0;
+
+    function typeChar() {
+        if (i < text.length) {
+            header.textContent += text.charAt(i);
+            i++;
+            setTimeout(typeChar, 100);
+        } else {
+            header.style.borderRight = "none";
+        }
+    }
+
+    typeChar();
+});
+
+/**
  * Toggles the display of an individual team member's bio
  * @param {string} bioId - The ID of the bio section to show or hide
  */
